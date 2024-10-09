@@ -6,6 +6,10 @@ const Home = () => {
 	const [content, setContent] = useState("")
 	const [title, setTitle] = useState("")
 
+	useEffect(() => {
+		getNotes()
+	}, [])
+
 	const getNotes = () => {
 		api
 			.get("/api/notes")
